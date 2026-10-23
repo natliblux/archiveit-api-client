@@ -19,9 +19,6 @@ public class Account
     @SerializedName("invoice_data_budget_in_gbs")
     private int invoiceDataBudgetInGbs;
     
-    @SerializedName("ledger_data_budget_in_gbs")
-    private int ledgerDataBudgetInGbs;
-    
     @SerializedName("annual_subscription_cost")
     private int annualSubscriptionCost;
     
@@ -112,12 +109,6 @@ public class Account
     @SerializedName("account_type")
     private String accountType;
     
-    @SerializedName("enforce_budget")
-    private boolean enforceBudget;
-    
-    @SerializedName("subscription_notes")
-    private String subscriptionNotes;
-    
     @SerializedName("active")
     private boolean active;
     
@@ -174,14 +165,6 @@ public class Account
 
 	public void setInvoiceDataBudgetInGbs(int invoiceDataBudgetInGbs) {
 		this.invoiceDataBudgetInGbs = invoiceDataBudgetInGbs;
-	}
-
-	public int getLedgerDataBudgetInGbs() {
-		return ledgerDataBudgetInGbs;
-	}
-
-	public void setLedgerDataBudgetInGbs(int ledgerDataBudgetInGbs) {
-		this.ledgerDataBudgetInGbs = ledgerDataBudgetInGbs;
 	}
 
 	public int getAnnualSubscriptionCost() {
@@ -424,22 +407,6 @@ public class Account
 		this.accountType = accountType;
 	}
 
-	public boolean isEnforceBudget() {
-		return enforceBudget;
-	}
-
-	public void setEnforceBudget(boolean enforceBudget) {
-		this.enforceBudget = enforceBudget;
-	}
-
-	public String getSubscriptionNotes() {
-		return subscriptionNotes;
-	}
-
-	public void setSubscriptionNotes(String subscriptionNotes) {
-		this.subscriptionNotes = subscriptionNotes;
-	}
-
 	public boolean isActive() {
 		return active;
 	}
@@ -492,8 +459,7 @@ public class Account
 	public String toString() {
 		return "Account [createdBy=" + createdBy + ", createdDate=" + createdDate + ", lastUpdatedBy=" + lastUpdatedBy
 				+ ", lastUpdatedDate=" + lastUpdatedDate + ", invoiceDataBudgetInGbs=" + invoiceDataBudgetInGbs
-				+ ", ledgerDataBudgetInGbs=" + ledgerDataBudgetInGbs + ", annualSubscriptionCost="
-				+ annualSubscriptionCost + ", subscriptionCurrency=" + subscriptionCurrency + ", billingName="
+				+ ", annualSubscriptionCost=" + annualSubscriptionCost + ", subscriptionCurrency=" + subscriptionCurrency + ", billingName="
 				+ billingName + ", billingEmail=" + billingEmail + ", billingAddress=" + billingAddress
 				+ ", billingPeriodStartDate=" + billingPeriodStartDate + ", memberSinceDate=" + memberSinceDate
 				+ ", subscriptionEndDate=" + subscriptionEndDate + ", autoRenew=" + autoRenew + ", partnerUrl="
@@ -505,8 +471,7 @@ public class Account
 				+ organizationName + ", publicRegistryEnabled=" + publicRegistryEnabled + ", metadataPublic="
 				+ metadataPublic + ", tosEnabled=" + tosEnabled + ", feedEnabled=" + feedEnabled + ", deleted="
 				+ deleted + ", ignoreRobotsOptionVisible=" + ignoreRobotsOptionVisible + ", ignoreDelayOptionVisible="
-				+ ignoreDelayOptionVisible + ", accountType=" + accountType + ", enforceBudget=" + enforceBudget
-				+ ", subscriptionNotes=" + subscriptionNotes + ", active=" + active + ", maxConcurrentTestCrawls="
+				+ ignoreDelayOptionVisible + ", accountType=" + accountType + ", active=" + active + ", maxConcurrentTestCrawls="
 				+ maxConcurrentTestCrawls + ", hidden=" + hidden + ", warcUploadLinkVisible=" + warcUploadLinkVisible
 				+ ", defaultCrawlLimitInGbs=" + defaultCrawlLimitInGbs + ", showLongerCrawlDurations="
 				+ showLongerCrawlDurations + "]";
