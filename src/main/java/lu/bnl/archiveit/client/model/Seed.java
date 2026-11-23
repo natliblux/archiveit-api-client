@@ -15,9 +15,6 @@ public class Seed
     @SerializedName("collection")
     private int collection;
 
-    @SerializedName("crawl_definition")
-    private long crawlDefinition;
-
     @SerializedName("created_by")
     private String createdBy;
 
@@ -79,14 +76,6 @@ public class Seed
 
     public void setCollection(int collection) {
         this.collection = collection;
-    }
-
-    public long getCrawlDefinition() {
-        return crawlDefinition;
-    }
-
-    public void setCrawlDefinition(long crawlDefinition) {
-        this.crawlDefinition = crawlDefinition;
     }
 
     public String getCreatedBy() {
@@ -191,7 +180,6 @@ public class Seed
                 "active=" + active +
                 ", canonicalUrl='" + canonicalUrl + '\'' +
                 ", collection=" + collection +
-                ", crawlDefinition=" + crawlDefinition +
                 ", createdBy='" + createdBy + '\'' +
                 ", createdDate='" + createdDate + '\'' +
                 ", deleted=" + deleted +
